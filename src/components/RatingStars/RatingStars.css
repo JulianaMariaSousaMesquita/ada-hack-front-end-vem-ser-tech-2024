@@ -1,0 +1,16 @@
+.rating-container {
+    display: inline-block;
+  }
+  
+  .star {
+    cursor: pointer;
+    font-size: 24px;
+  }
+  
+  .star.filled {
+    color: gold;
+  }
+  
+  h4 {
+    margin: 10px;
+  }
