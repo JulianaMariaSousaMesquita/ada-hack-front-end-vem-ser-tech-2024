@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './Form.css';
-import RatingStars from '../RatingStars/RatingStars';
+import RatingStars from '../RatingStars/RatingStars.modules';
 
 const Form = () => {
   const [message, setMessage] = useState('');
