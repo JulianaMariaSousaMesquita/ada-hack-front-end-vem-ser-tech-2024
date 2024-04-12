@@ -1,0 +1,32 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #EB12FE;
+    width: 100%;
+  }
+  
+  .menu-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #fff;
+    margin-left: 50px;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  
+  .login-button {
+    padding: 0.5rem 1rem;
+    background-color: #9B2EAE;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-right: 20px;
+    width: 100px;
+  }
+  

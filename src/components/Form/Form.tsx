@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './Form.css'; 
+import './Form.css';
 import RatingStars from '../RatingStars/RatingStars';
-
 
 const Form = () => {
   const [message, setMessage] = useState('');
-  const [stars, setStars] = useState<number | null>(null); 
+  const [stars, setStars] = useState<number | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setMessage(e.target.value);
@@ -30,21 +29,29 @@ const Form = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="form-container">
-      <div>
-        <h4>Avalie nosso serviço:</h4>
-        <RatingStars onRate={handleRate}/>
+    <div className="form-container">
+      <div className="sidebar">
       </div>
-      <textarea
-        name="message"
-        value={message}
-        onChange={handleChange}
-        className="text-area"
-        rows={6}
-        placeholder='Conte-nos mais detalhes!'
-      />
-      <button type="submit">Enviar</button>
-    </form>
+      <form onSubmit={handleSubmit} className="main-content">
+        <div className="feedback-container">
+          <span className="back-arrow">&#8592;</span>
+          <h1>Feedback</h1>
+        </div>
+        <div>
+          <h4>How was your experience</h4>
+          <RatingStars onRate={handleRate} />
+        </div>
+        <textarea
+          name="message"
+          value={message}
+          onChange={handleChange}
+          className="text-area"
+          rows={6}
+          placeholder='Suggest anything we can improve...'
+        />
+        <button className='button-submit' type="submit">Send Feedback</button>
+      </form>
+    </div>
   );
 };
 
