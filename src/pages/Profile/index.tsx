@@ -1,4 +1,3 @@
-import MenuBar from "../../components/MenuBar";
 
 const Profile = () => {
   const profileData = {
@@ -9,7 +8,6 @@ const Profile = () => {
 
   return (
     <>
-      <MenuBar />
       <div className="flex justify-center items-center h-screen bg-gray-200">
         <div className="max-w-md bg-white p-8 rounded-lg shadow-lg">
           <div className="text-center">
