@@ -4,7 +4,6 @@ import Home from "../pages/Home/home";
 import Form from "../components/Form/Form";
 
 const router = createBrowserRouter([
-  
   {
     path: "/",
     element: <DefaultLayout />,
@@ -17,8 +16,8 @@ const router = createBrowserRouter([
         path: "/form",
         element: <Form />,
       },
-    ]
-  },  
+    ],
+  },
 ]);
 
 export default router;

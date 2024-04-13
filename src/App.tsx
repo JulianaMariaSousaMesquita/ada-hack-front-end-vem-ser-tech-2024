@@ -1,18 +1,14 @@
 import { RouterProvider } from "react-router-dom";
 import router from "./routes/routes.index";
-import { ThemeProvider } from "./contexts/ThemeContext";
+import { useTheme } from "./contexts/ThemeContext";
 
 function App() {
-  // const { theme } = useTheme();
+  const { theme } = useTheme();
 
   return (
-    <>
-      <ThemeProvider>
-        <div className="h-screen" data-theme="garden">
-          <RouterProvider router={router} />
-        </div>
-      </ThemeProvider>
-    </>
+    <div className="h-screen" data-theme={theme}>
+      <RouterProvider router={router} />
+    </div>
   );
 }
 

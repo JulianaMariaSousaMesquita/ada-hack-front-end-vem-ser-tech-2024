@@ -7,18 +7,19 @@ import {
   ReactNode,
 } from "react";
 
-interface ThemeProviderProps {
+type ThemeProviderProps = {
   children: ReactNode;
-}
+};
 
 interface ThemeContextType {
   theme: string;
   changeTheme: (theme: string) => void;
 }
 
-export const ThemeContext = createContext<ThemeContextType | undefined>(
-  undefined
-);
+export const ThemeContext = createContext<ThemeContextType>({
+  theme: "",
+  changeTheme: ()=>{} ,
+});
 
 export const useTheme = () => useContext(ThemeContext);
 
@@ -34,7 +35,7 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
     const savedTheme = localStorage.getItem("theme");
 
     if (savedTheme) {
-      setTheme(JSON.parse(savedTheme));
+      setTheme(savedTheme);
     }
   }, []);
 
