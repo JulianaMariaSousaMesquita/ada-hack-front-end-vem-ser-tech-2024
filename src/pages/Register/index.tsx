@@ -1,15 +1,15 @@
+import { ErrorMessage, Field, Form, Formik } from "formik";
 import React from "react";
-import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import MenuBar from "../../components/MenuBar";
 
 const Register: React.FC = () => {
   return (
     <>
-      <MenuBar />
       <div className="flex justify-center items-center h-screen bg-transparent">
         <div className="max-w-md mx-auto p-8 bg-transparent rounded-lg shadow-lg">
-          <h1 className="text-3xl font-bold text-center mb-4 text-white">Cadastro</h1>
+          <h1 className="text-3xl font-bold text-center mb-4 text-white">
+            Cadastro
+          </h1>
           <Formik
             initialValues={{
               fullName: "",
@@ -19,7 +19,9 @@ const Register: React.FC = () => {
               state: "",
             }}
             validationSchema={Yup.object({
-              fullName: Yup.string().required("Por favor, digite o seu nome completo."),
+              fullName: Yup.string().required(
+                "Por favor, digite o seu nome completo."
+              ),
               email: Yup.string()
                 .email("Endereço de e-mail inválido")
                 .required("Por favor, digite o seu e-mail."),
@@ -29,7 +31,9 @@ const Register: React.FC = () => {
                   /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
                   "A senha deve conter pelo menos uma letra, um caractere especial, um número e ter no mínimo 8 caracteres"
                 ),
-              employeeId: Yup.string().required("Por favor, digite o sua matricula."),
+              employeeId: Yup.string().required(
+                "Por favor, digite o sua matricula."
+              ),
               state: Yup.string().required("Por favor, digite o seu estado."),
             })}
             onSubmit={(values) => {
@@ -38,7 +42,10 @@ const Register: React.FC = () => {
           >
             <Form className="space-y-4">
               <div>
-                <label htmlFor="fullName" className="block mb-1 font-bold text-white">
+                <label
+                  htmlFor="fullName"
+                  className="block mb-1 font-bold text-white"
+                >
                   Nome completo
                 </label>
                 <Field
@@ -55,7 +62,10 @@ const Register: React.FC = () => {
               </div>
 
               <div>
-                <label htmlFor="email" className="block mb-1 font-bold text-white">
+                <label
+                  htmlFor="email"
+                  className="block mb-1 font-bold text-white"
+                >
                   E-mail
                 </label>
                 <Field
@@ -72,7 +82,10 @@ const Register: React.FC = () => {
               </div>
 
               <div>
-                <label htmlFor="password" className="block mb-1 font-bold text-white">
+                <label
+                  htmlFor="password"
+                  className="block mb-1 font-bold text-white"
+                >
                   Senha
                 </label>
                 <Field
@@ -89,7 +102,10 @@ const Register: React.FC = () => {
               </div>
 
               <div>
-                <label htmlFor="employeeId" className="block mb-1 font-bold text-white">
+                <label
+                  htmlFor="employeeId"
+                  className="block mb-1 font-bold text-white"
+                >
                   Matricula
                 </label>
                 <Field
@@ -106,7 +122,10 @@ const Register: React.FC = () => {
               </div>
 
               <div>
-                <label htmlFor="state" className="block mb-1 font-bold text-white">
+                <label
+                  htmlFor="state"
+                  className="block mb-1 font-bold text-white"
+                >
                   Estado
                 </label>
                 <Field
