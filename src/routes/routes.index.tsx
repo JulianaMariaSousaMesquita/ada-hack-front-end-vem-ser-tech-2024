@@ -6,6 +6,7 @@ import Cursos from "../pages/cursos";
 import Cadastro from "../pages/Register";
 import FeedBacks from "../pages/FeedBacks";
 import Profile from "../pages/Profile";
+import Login from "../pages/Login/index.tsx";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: "/profile",
         element: <Profile />,
+      },
+      {
+        path: "/entrar",
+        element: <Login />,
       },
     ],
   },
