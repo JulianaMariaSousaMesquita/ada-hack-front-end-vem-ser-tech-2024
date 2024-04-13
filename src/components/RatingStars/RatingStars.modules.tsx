@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './RatingStars.css';
+import './RatingStars.modules.css';
 
 interface RatingStarsProps {
   onRate: (rating: number) => void;

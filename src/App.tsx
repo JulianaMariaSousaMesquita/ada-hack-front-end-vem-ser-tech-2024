@@ -6,7 +6,7 @@ function App() {
   const { theme } = useTheme();
 
   return (
-    <div className="h-screen" data-theme={theme}>
+    <div className="h-full min-h-screen" data-theme={theme}>
       <RouterProvider router={router} />
     </div>
   );

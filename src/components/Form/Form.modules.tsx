@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './Form.css';
+import './Form.modules.css';
 import RatingStars from '../RatingStars/RatingStars.modules';
 
 const Form = () => {
