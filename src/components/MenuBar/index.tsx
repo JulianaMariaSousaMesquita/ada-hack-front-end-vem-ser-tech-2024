@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import DefaultProfile from "../../assets/Default.svg";
 import Logo from "../../assets/Logo.svg";
+import ThemeSelect from "../ThemeSelect";
 
 function MenuBar() {
   return (
+    <>
     <div className="navbar  shadow-lg ">
       <div className="navbar-start">
         <img src={Logo} alt="Logo" className="h-10 my-2 w-auto ml-10" />
@@ -18,10 +20,10 @@ function MenuBar() {
             <Link to={`/cursos`}>Cursos</Link>
           </li>
           <li>
-            <Link to={`/`}>FeedBacks</Link>
+            <Link to={`/feedbacks`}>Feedbacks</Link>
           </li>
           <li>
-            <Link to={`/`}>Cadastro</Link>
+            <Link to={`/cadastro`}>Cadastro</Link>
           </li>
         </ul>
       </div>
@@ -57,6 +59,8 @@ function MenuBar() {
         </div>
       </div>
     </div>
+    <ThemeSelect />
+    </>
   );
 }
 
