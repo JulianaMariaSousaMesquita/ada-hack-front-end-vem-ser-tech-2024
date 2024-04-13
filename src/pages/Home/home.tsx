@@ -1,9 +1,9 @@
-import MenuBar from "./menuBar";
+import MenuBar from "../../components/MenuBar/index";
 
 function Home() {
   return (
     <>
-      <MenuBar />
+      <MenuBar/>
     </>
   );
 }
