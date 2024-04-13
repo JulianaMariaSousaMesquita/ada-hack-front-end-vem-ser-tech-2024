@@ -1,13 +1,6 @@
 import React, { useState } from "react";
 import CardCursos from "../components/CardCursos/cardCursos.module";
 
-interface Curso {
-  id: number;
-  nome: string;
-  descricao: string;
-  imagem: string;
-}
-
 const Cursos: React.FC = () => {
   const [filtro, setFiltro] = useState<string>("");
 
