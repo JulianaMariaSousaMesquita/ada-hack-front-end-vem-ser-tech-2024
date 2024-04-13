@@ -1,9 +1,9 @@
-import MenuBar from "../../components/MenuBar/index";
+import { Carousel } from "../../components/Carousel";
 
 function Home() {
   return (
     <>
-      <MenuBar/>
+     <Carousel/>
     </>
   );
 }
