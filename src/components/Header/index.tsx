@@ -1,9 +1,8 @@
 import Logo from "../../assets/Logo.svg";
-
 import { Link } from "react-router-dom";
 import userDefault from "../../assets/Default.svg";
 
-function MenuBar() {
+function Header() {
   return (
     <div className="flex justify-between bg-[#46509B] text-white">
       <div className="flex">
@@ -38,4 +37,4 @@ function MenuBar() {
   );
 }
 
-export default MenuBar;
+export default Header;

@@ -1,13 +1,18 @@
-import Form from './components/Form/Form';
-import Header from './components/Header/Header';
+import { RouterProvider } from "react-router-dom";
+import router from "./routes/routes.index";
+import { ThemeProvider } from "./contexts/ThemeContext";
 
 function App() {
+  // const { theme } = useTheme();
 
   return (
-    <div>
-      <Header />
-      <Form />
-    </div>
+    <>
+      <ThemeProvider>
+        <div className="h-screen" data-theme="garden">
+          <RouterProvider router={router} />
+        </div>
+      </ThemeProvider>
+    </>
   );
 }
 
