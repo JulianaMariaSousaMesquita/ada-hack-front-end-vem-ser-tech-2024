@@ -19,7 +19,7 @@ const router = createBrowserRouter([
       {
         path: "/form",
         element: <Form />,
-      },     
+      },
       {
         path: "/cursos",
         element: <Cursos />,
@@ -30,12 +30,14 @@ const router = createBrowserRouter([
       },
       {
         path: "/feedbacks",
-        element: <FeedBacks/>,
+        element: <FeedBacks />,
       },
       {
         path: "/profile",
-        element: <Profile/>,
+        element: <Profile />,
       },
+    ],
+  },
 ]);
 
 export default router;
