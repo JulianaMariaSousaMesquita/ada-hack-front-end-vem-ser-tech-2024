@@ -43,7 +43,7 @@ function MenuBar() {
           >
             <li>
               <a className="justify-between">
-                Profile
+              <Link to={`/profile`}>Profile</Link>
                 <span className="badge">New</span>
               </a>
             </li>
