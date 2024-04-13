@@ -18,10 +18,10 @@ function MenuBar() {
             <Link to={`/cursos`}>Cursos</Link>
           </li>
           <li>
-            <Link to={`/`}>FeedBacks</Link>
+            <Link to={`/feedbacks`}>FeedBacks</Link>
           </li>
           <li>
-            <Link to={`/`}>Cadastro</Link>
+            <Link to={`/cadastro`}>Cadastro</Link>
           </li>
         </ul>
       </div>

@@ -1,12 +1,12 @@
-import Form from './components/Form/Form';
 import Header from './components/Header/Header';
+import Home from './pages/Home/home';
 
 function App() {
 
   return (
     <div>
       <Header />
-      <Form />
+      <Home />
     </div>
   );
 }
