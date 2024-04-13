@@ -1,4 +1,4 @@
-import Header from './components/Header/Header';
+import Header from './components/Header/Header.modules';
 import Home from './pages/Home/home';
 
 function App() {
