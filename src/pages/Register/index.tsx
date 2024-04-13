@@ -7,9 +7,9 @@ const Register: React.FC = () => {
   return (
     <>
       <MenuBar />
-      <div className="flex justify-center items-center h-screen">
-        <div className="max-w-md mx-auto">
-          <h1 className="text-3xl font-bold mb-4">Cadastro</h1>
+      <div className="flex justify-center items-center h-screen bg-transparent">
+        <div className="max-w-md mx-auto p-8 bg-transparent rounded-lg shadow-lg">
+          <h1 className="text-3xl font-bold text-center mb-4 text-white">Cadastro</h1>
           <Formik
             initialValues={{
               fullName: "",
@@ -36,95 +36,95 @@ const Register: React.FC = () => {
               console.log("Dados:", values);
             }}
           >
-            <Form>
-              <div className="mb-4">
-                <label htmlFor="fullName" className="block mb-2 font-bold">
+            <Form className="space-y-4">
+              <div>
+                <label htmlFor="fullName" className="block mb-1 font-bold text-white">
                   Nome completo
                 </label>
                 <Field
                   type="text"
                   id="fullName"
                   name="fullName"
-                  className="w-full px-3 py-2 border rounded-lg"
+                  className="w-full px-3 py-2 border border-white rounded-lg text-white"
                 />
                 <ErrorMessage
                   name="fullName"
                   component="div"
-                  className="text-red-500"
+                  className="text-red-500 text-sm"
                 />
               </div>
 
-              <div className="mb-4">
-                <label htmlFor="email" className="block mb-2 font-bold">
+              <div>
+                <label htmlFor="email" className="block mb-1 font-bold text-white">
                   E-mail
                 </label>
                 <Field
                   type="email"
                   id="email"
                   name="email"
-                  className="w-full px-3 py-2 border rounded-lg"
+                  className="w-full px-3 py-2 border border-white rounded-lg text-white"
                 />
                 <ErrorMessage
                   name="email"
                   component="div"
-                  className="text-red-500"
+                  className="text-red-500 text-sm"
                 />
               </div>
 
-              <div className="mb-4">
-                <label htmlFor="password" className="block mb-2 font-bold">
+              <div>
+                <label htmlFor="password" className="block mb-1 font-bold text-white">
                   Senha
                 </label>
                 <Field
                   type="password"
                   id="password"
                   name="password"
-                  className="w-full px-3 py-2 border rounded-lg"
+                  className="w-full px-3 py-2 border border-white rounded-lg text-white"
                 />
                 <ErrorMessage
                   name="password"
                   component="div"
-                  className="text-red-500"
+                  className="text-red-500 text-sm"
                 />
               </div>
 
-              <div className="mb-4">
-                <label htmlFor="employeeId" className="block mb-2 font-bold">
+              <div>
+                <label htmlFor="employeeId" className="block mb-1 font-bold text-white">
                   Matricula
                 </label>
                 <Field
                   type="text"
                   id="employeeId"
                   name="employeeId"
-                  className="w-full px-3 py-2 border rounded-lg"
+                  className="w-full px-3 py-2 border border-white rounded-lg text-white"
                 />
                 <ErrorMessage
                   name="employeeId"
                   component="div"
-                  className="text-red-500"
+                  className="text-red-500 text-sm"
                 />
               </div>
 
-              <div className="mb-4">
-                <label htmlFor="state" className="block mb-2 font-bold">
+              <div>
+                <label htmlFor="state" className="block mb-1 font-bold text-white">
                   Estado
                 </label>
                 <Field
                   type="text"
                   id="state"
                   name="state"
-                  className="w-full px-3 py-2 border rounded-lg"
+                  className="w-full px-3 py-2 border border-white rounded-lg text-white"
                 />
                 <ErrorMessage
                   name="state"
                   component="div"
-                  className="text-red-500"
+                  className="text-red-500 text-sm"
                 />
               </div>
 
               <button
                 type="submit"
-                className="bg-blue-500 text-white px-4 py-2 rounded-lg"
+                className="bg-blue-500 text-white px-4 py-2 rounded-lg block mx-auto"
               >
                 Cadastrar
               </button>
