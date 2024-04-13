@@ -1,5 +1,5 @@
 import CardCursos from "../components/CardCursos/cardCursos.module";
-import MenuBar from "./Home/menuBar";
+import MenuBar from "../components/MenuBar";
 
 export default function Cursos() {
     const numeros = Array.from({ length: 9 }, (_, index) => index + 1);
@@ -19,4 +19,4 @@ export default function Cursos() {
             </div>
         </>
     );
-};
+}
