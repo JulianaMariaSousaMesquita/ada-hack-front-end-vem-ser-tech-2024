@@ -16,6 +16,9 @@ function MenuBar() {
           <Link to={`/`} className="m-auto">
             <li>Home</li>
           </Link>
+          <Link to={`/cursos`} className="m-auto">
+            <li>Cursos</li>
+          </Link>
           <Link to={`/`} className="m-auto">
             <li>Feedbacks</li>
           </Link>
