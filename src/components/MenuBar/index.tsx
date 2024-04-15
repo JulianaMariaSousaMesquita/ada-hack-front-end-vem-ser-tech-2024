@@ -53,7 +53,7 @@ function MenuBar() {
             </h1>
           </Link>
         </div>
-        <div className="navbar-center hidden lg:flex sm:w-[40%] lg:w-[30%]">
+        <div className="navbar-center hidden lg:flex lg:w-[40%] xl:w-[35%]">
           <ul className="dropdown dropdown-bottom menu sm:menu-horizontal px-1 text-lg">
             <li>
               <Link to={`/`}>Home</Link>
@@ -65,14 +65,14 @@ function MenuBar() {
               <Link to={`/feedbacks`}>Feedbacks</Link>
             </li>
             <li onClick={() => openModal("register")}>
-              <Link to="">Cadastro</Link>
+              <a>Cadastro</a>
             </li>
           </ul>
         </div>
         <div className="navbar-end w-10 sm:w-16 ml-20 sm:ml-32 mr-0 sm:mr-10 ">
           <ul className="menu menu-horizontal px-0 text-lg">
             <li onClick={() => openModal("login")}>
-              <Link to="">Entrar</Link>
+              <a className="text-xs sm:text-xl mr-0 sm:mr-1">Entrar</a>
             </li>
           </ul>
           <div className="dropdown dropdown-end ">
