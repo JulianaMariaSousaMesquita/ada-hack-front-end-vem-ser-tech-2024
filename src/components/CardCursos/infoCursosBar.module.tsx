@@ -1,7 +1,7 @@
 export default function InfoCursosBar() {
   return (
     <>
-      <div className="stats flex text-xs space-x-2">
+      <div className="stats flex text-xs space-x-2 bg-[#ffff]/80">
         <div className=" flex flex-1 space-x-1 h-5 place-items-center justify-center">
           <div className="stat-figure text-secondary">
             <svg
@@ -11,7 +11,7 @@ export default function InfoCursosBar() {
             >
               <path
                 fill="none"
-                stroke="yellow"
+                stroke="#0A033C"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
@@ -19,7 +19,7 @@ export default function InfoCursosBar() {
               />
             </svg>
           </div>
-          <div className="stat-desc text-xs">4.5</div>
+          <div className="stat-desc text-xs text-[#0A033C]">4.5</div>
           <div className="stat-value text-gray-500 text-xs">(31K)</div>
         </div>
 
@@ -64,8 +64,8 @@ export default function InfoCursosBar() {
               </g>
             </svg>
           </div>
-          <div className="stat-value text-xs">2</div>
-          <div className="stat-title text-xs">sessions</div>
+          <div className="stat-value text-xs text-[#0A033C]">2</div>
+          <div className="stat-title text-xs text-[#0A033C]">sessions</div>
         </div>
 
         <div className="flex flex-1 space-x-1 h-5 place-items-center justify-center">
@@ -80,8 +80,8 @@ export default function InfoCursosBar() {
               <path d="M0 0h24v24H0z" fill="none" />
             </svg>
           </div>
-          <div className="stat-value text-xs">8</div>
-          <div className="stat-title text-xs">hours</div>
+          <div className="stat-value text-xs text-[#0A033C]">8</div>
+          <div className="stat-title text-xs text-[#0A033C]">hours</div>
         </div>
       </div>
     </>
