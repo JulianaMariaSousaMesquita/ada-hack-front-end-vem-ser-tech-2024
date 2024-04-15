@@ -20,7 +20,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/form",
-        element: <FormFeedback />,
+        element: <FeedBacks />,
       },
       {
         path: "/cursos",
@@ -32,7 +32,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/feedbacks",
-        element: <FeedBacks />,
+        element: <FormFeedback />,
       },
       {
         path: "/profile",
