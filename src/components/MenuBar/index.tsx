@@ -10,7 +10,7 @@ function MenuBar() {
       <div className="navbar  shadow-lg ">
         <div className="dropdown mr-1 w-2 ">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-            <IoMenu className="size-5 absolute "/>
+            <IoMenu className="size-5 absolute " />
           </div>
           <ul
             tabIndex={0}
@@ -31,12 +31,18 @@ function MenuBar() {
           </ul>
         </div>
         <div className="navbar-start ml-10">
-          <img src={Logo} alt="Logo" className="h-6 sm:h-10  w-auto sm:ml-10" />
-          <h1 className="text-xs font-bold sm:text-3xl w-32 sm:w-52  my-2 ml-2 ">
-            Corp Solutions
-          </h1>
+          <Link to={"/"} className="flex items-center">
+            <img
+              src={Logo}
+              alt="Logo"
+              className="h-6 sm:h-10 w-auto sm:ml-10"
+            />
+            <h1 className="text-xs font-bold sm:text-3xl w-32 sm:w-52  my-2 ml-2 ">
+              Corp Solutions
+            </h1>
+          </Link>
         </div>
-        <div className="navbar-center hidden lg:flex  w-[30%]">
+        <div className="navbar-center hidden lg:flex sm:w-[40%] lg:w-[30%]">
           <ul className="dropdown dropdown-bottom menu sm:menu-horizontal px-1 text-lg">
             <li>
               <Link to={`/`}>Home</Link>
