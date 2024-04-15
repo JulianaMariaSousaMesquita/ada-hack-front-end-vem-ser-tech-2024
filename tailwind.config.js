@@ -12,6 +12,6 @@ export default {
   },
   plugins: [require("daisyui")],
   daisyui: {
-    themes: ["garden", "dark", "light", "business", "autumn", "aqua", "corporate"],
+    themes: ["aqua", "garden", "business"],
   },
 };

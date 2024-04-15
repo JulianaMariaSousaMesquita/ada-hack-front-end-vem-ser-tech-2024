@@ -2,11 +2,12 @@ import { createBrowserRouter } from "react-router-dom";
 import DefaultLayout from "../pages/layouts/Default";
 import Home from "../pages/Home/home";
 import Form from "../components/Form/Form.modules.tsx";
-import Cursos from "../pages/cursos";
+import Cursos from "../pages/cursos/cursos.tsx";
 import Cadastro from "../pages/Register";
 import FeedBacks from "../pages/FeedBacks";
 import Profile from "../pages/Profile";
 import Login from "../pages/Login/index.tsx";
+import FormFeedback from "../components/FormFeedback/index.tsx";
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/form",
-        element: <Form />,
+        element: <FormFeedback />,
       },
       {
         path: "/cursos",

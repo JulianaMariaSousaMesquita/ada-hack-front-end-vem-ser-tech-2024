@@ -1,8 +1,8 @@
 export default function InfoCursosBar() {
   return (
     <>
-      <div className="flex space-x-2 stats text-xs p-1 ">
-        <div className="stat flex space-x-0.5 place-items-center justify-center">
+      <div className="stats flex text-xs space-x-2">
+        <div className=" flex flex-1 space-x-1 h-5 place-items-center justify-center">
           <div className="stat-figure text-secondary">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -11,7 +11,7 @@ export default function InfoCursosBar() {
             >
               <path
                 fill="none"
-                stroke="currentColor"
+                stroke="yellow"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
@@ -19,16 +19,16 @@ export default function InfoCursosBar() {
               />
             </svg>
           </div>
-          <div className="stat-desc">4.5</div>
-          <div className="stat-value text-gray-500">(31K)</div>
+          <div className="stat-desc text-xs">4.5</div>
+          <div className="stat-value text-gray-500 text-xs">(31K)</div>
         </div>
 
-        <div className="stat flex space-x-1 place-items-center justify-center">
+        <div className="flex flex-1 space-x-1 h-5 place-items-center justify-center">
           <div className="stat-figure text-secondary">
             <svg
               fill="#000000"
-              height="20px"
-              width="20px"
+              height="16px"
+              width="16px"
               version="1.1"
               id="Layer_1"
               xmlns="http://www.w3.org/2000/svg"
@@ -64,24 +64,24 @@ export default function InfoCursosBar() {
               </g>
             </svg>
           </div>
-          <div className="stat-value">2</div>
-          <div className="stat-title">sessions</div>
+          <div className="stat-value text-xs">2</div>
+          <div className="stat-title text-xs">sessions</div>
         </div>
 
-        <div className="stat flex space-x-0.5 place-items-center justify-center">
+        <div className="flex flex-1 space-x-1 h-5 place-items-center justify-center">
           <div className="stat-figure text-secondary">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              width="24"
-              height="24"
+              width="16"
+              height="16"
             >
               <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-9.03V7h2v5l4.25 2.52-.75 1.23L11 13.97z" />
               <path d="M0 0h24v24H0z" fill="none" />
             </svg>
           </div>
-          <div className="stat-value">8</div>
-          <div className="stat-title">hours</div>
+          <div className="stat-value text-xs">8</div>
+          <div className="stat-title text-xs">hours</div>
         </div>
       </div>
     </>
