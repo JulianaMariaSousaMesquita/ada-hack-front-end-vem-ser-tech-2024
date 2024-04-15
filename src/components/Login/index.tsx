@@ -6,7 +6,7 @@ import * as Yup from "yup";
 const Login: React.FC = () => {
   return (
     <>
-      <div className="flex justify-center items-center mt-8 mb-20 bg-transparent">
+      <div className="flex justify-center items-center bg-transparent">
         <div className="max-w-md w-full mx-auto p-8 bg-transparent rounded-lg shadow-lg">
           <h1 className="text-3xl font-bold text-center mb-4 ">Login</h1>
           <Formik
@@ -64,7 +64,7 @@ const Login: React.FC = () => {
                 />
               </div>
 
-              <button type="submit" className="btn btn-primary btn-wide block mx-auto">
+              <button type="submit" className="btn btn-primary sm:btn-wide block mx-auto">
                 Entrar
               </button>
             </Form>

@@ -3,8 +3,16 @@ import { Link } from "react-router-dom";
 import DefaultProfile from "../../assets/Default.svg";
 import Logo from "../../assets/Logo.svg";
 import ThemeSelect from "../ThemeSelect";
+import Login from "../Login";
+import Register from "../Register";
 
 function MenuBar() {
+  function openModal(id: string) {
+    if (document) {
+      (document.getElementById(id) as HTMLFormElement).showModal();
+    }
+  }
+
   return (
     <>
       <div className="navbar  shadow-lg ">
@@ -25,8 +33,11 @@ function MenuBar() {
             <li>
               <Link to={`/feedbacks`}>Feedbacks</Link>
             </li>
-            <li>
-              <Link to={`/cadastro`}>Cadastro</Link>
+            <li
+              className="py-1 px-3 cursor-pointer"
+              onClick={() => openModal("register")}
+            >
+              Cadastro
             </li>
           </ul>
         </div>
@@ -53,17 +64,15 @@ function MenuBar() {
             <li>
               <Link to={`/feedbacks`}>Feedbacks</Link>
             </li>
-            <li>
-              <Link to={`/cadastro`}>Cadastro</Link>
+            <li onClick={() => openModal("register")}>
+              <Link to="">Cadastro</Link>
             </li>
           </ul>
         </div>
         <div className="navbar-end w-10 sm:w-16 ml-20 sm:ml-32 mr-0 sm:mr-10 ">
           <ul className="menu menu-horizontal px-0 text-lg">
-            <li>
-              <Link to={`/entrar`} className="text-xs sm:text-xl mr-0 sm:mr-1">
-                Entrar
-              </Link>
+            <li onClick={() => openModal("login")}>
+              <Link to="">Entrar</Link>
             </li>
           </ul>
           <div className="dropdown dropdown-end ">
@@ -97,6 +106,26 @@ function MenuBar() {
         </div>
       </div>
       <ThemeSelect />
+      <dialog id="login" className="modal">
+        <div className="modal-box">
+          <Login />
+          <div className="modal-action">
+            <form method="dialog">
+              <button className="btn">Fechar</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+      <dialog id="register" className="modal">
+        <div className="modal-box">
+          <Register />
+          <div className="modal-action">
+            <form method="dialog">
+              <button className="btn">Fechar</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
     </>
   );
 }
