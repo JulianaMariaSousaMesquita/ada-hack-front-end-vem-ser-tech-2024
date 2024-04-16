@@ -141,7 +141,6 @@ export default function CandidateRegistration() {
                 <label className="flex my-2">
                   <Field
                     type="radio"
-                    id="race"
                     name="race"
                     className="radio radio-primary"
                     value="Negro"
@@ -151,7 +150,6 @@ export default function CandidateRegistration() {
                 <label className="flex my-2">
                   <Field
                     type="radio"
-                    id="race"
                     name="race"
                     className="radio radio-primary"
                     value="Pardo"
@@ -161,7 +159,6 @@ export default function CandidateRegistration() {
                 <label className="flex my-2">
                   <Field
                     type="radio"
-                    id="race"
                     name="race"
                     className="radio radio-primary"
                     value="Amarelo"
@@ -171,7 +168,6 @@ export default function CandidateRegistration() {
                 <label className="flex my-2">
                   <Field
                     type="radio"
-                    id="race"
                     name="race"
                     className="radio radio-primary"
                     value="Indígena"
@@ -181,7 +177,6 @@ export default function CandidateRegistration() {
                 <label className="flex my-2">
                   <Field
                     type="radio"
-                    id="race"
                     name="race"
                     className="radio radio-primary"
                     value="Branco"
@@ -191,7 +186,6 @@ export default function CandidateRegistration() {
                 <label className="flex my-2">
                   <Field
                     type="radio"
-                    id="race"
                     name="race"
                     className="radio radio-primary"
                     value=""
@@ -226,7 +220,6 @@ export default function CandidateRegistration() {
                 <label className="flex my-2">
                   <Field
                     type="radio"
-                    id="gender"
                     name="gender"
                     className="radio radio-primary"
                     value="Feminino"
@@ -236,7 +229,6 @@ export default function CandidateRegistration() {
                 <label className="flex my-2">
                   <Field
                     type="radio"
-                    id="gender"
                     name="gender"
                     className="radio radio-primary"
                     value="Mascculino"
@@ -246,7 +238,6 @@ export default function CandidateRegistration() {
                 <label className="flex my-2">
                   <Field
                     type="radio"
-                    id="gender"
                     name="gender"
                     className="radio radio-primary"
                     value="Não-binário"
@@ -256,7 +247,6 @@ export default function CandidateRegistration() {
                 <label className="flex my-2">
                   <Field
                     type="radio"
-                    id="gender"
                     name="gender"
                     className="radio radio-primary"
                     value=""
@@ -392,6 +382,189 @@ export default function CandidateRegistration() {
                 </div>
                 <ErrorMessage
                   name="education"
+                  component="div"
+                  className="text-warning text-sm"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="professionalExperience"
+                  className="block mb-1 font-bold"
+                >
+                  Experiência profissional
+                </label>
+                <Field
+                  type="textarea"
+                  id="professionalExperience"
+                  name="professionalExperience"
+                  className="w-full h-full min-h-32 textarea textarea-bordered bg-neutral text-neutral-content"
+                />
+                <ErrorMessage
+                  name="professionalExperience"
+                  component="div"
+                  className="text-warning text-sm"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="skillsAndCompetencies"
+                  className="block mb-1 font-bold"
+                >
+                  Habilidades e competências
+                </label>
+                <Field
+                  type="textarea"
+                  id="skillsAndCompetencies"
+                  name="skillsAndCompetencies"
+                  className="w-full h-full min-h-32 textarea textarea-bordered bg-neutral text-neutral-content"
+                />
+                <ErrorMessage
+                  name="skillsAndCompetencies"
+                  component="div"
+                  className="text-warning text-sm"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="experienceDiversityInclusion"
+                  className="block mb-1 font-bold"
+                >
+                  Experiência prévia em ambientes diversos e inclusivos
+                </label>
+                <Field
+                  name="experienceDiversityInclusion"
+                  as="select"
+                  className="select select-bordered w-full max-w-xs bg-neutral text-neutral-content"
+                >
+                  <option value="">Escolha uma opção</option>
+                  <option value="sim">Sim</option>
+                  <option value="nao">Não</option>
+                  <option value="pnd">Prefiro não dizer</option>
+                </Field>
+                <ErrorMessage
+                  name="experienceDiversityInclusion"
+                  component="div"
+                  className="text-warning text-sm"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="participationInitiatives"
+                  className="block mb-1 font-bold"
+                >
+                  Participação em iniciativas de diversidade e inclusão
+                </label>
+                <Field
+                  type="textarea"
+                  id="participationInitiatives"
+                  name="participationInitiatives"
+                  className="w-full h-full min-h-32 textarea textarea-bordered bg-neutral text-neutral-content"
+                />
+                <ErrorMessage
+                  name="participationInitiatives"
+                  component="div"
+                  className="text-warning text-sm"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="accommodations"
+                  className="block mb-1 font-bold"
+                >
+                  Necessita de acomodações especiais?
+                </label>
+                <Field
+                  name="accommodations"
+                  as="select"
+                  className="select select-bordered w-full max-w-xs bg-neutral text-neutral-content"
+                >
+                  <option value="">Escolha uma opção</option>
+                  <option value="sim">Sim</option>
+                  <option value="nao">Não</option>
+                  <option value="pnd">Prefiro não dizer</option>
+                </Field>
+                <ErrorMessage
+                  name="accommodations"
+                  component="div"
+                  className="text-warning text-sm"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="salaryExpectations"
+                  className="block mb-1 font-bold"
+                >
+                  Expectativas salariais
+                </label>
+                <Field
+                  type="text"
+                  id="salaryExpectations"
+                  name="salaryExpectations"
+                  placeholder="R$"
+                  className="w-full px-3 py-2 input input-bordered bg-neutral text-neutral-content"
+                />
+                <ErrorMessage
+                  name="salaryExpectations"
+                  component="div"
+                  className="text-warning text-sm"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="changeLocation"
+                  className="block mb-1 font-bold"
+                >
+                  Disponibilidade para viagens ou mudanças de localidade
+                </label>
+                <Field
+                  name="changeLocation"
+                  as="select"
+                  className="select select-bordered w-full max-w-xs bg-neutral text-neutral-content"
+                >
+                  <option value="">Escolha uma opção</option>
+                  <option value="sim">Sim</option>
+                  <option value="nao">Não</option>
+                </Field>
+                <ErrorMessage
+                  name="changeLocation"
+                  component="div"
+                  className="text-warning text-sm"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="skillsAndCompetencies"
+                  className="block mb-1 font-bold"
+                >
+                  Habilidades e competências
+                </label>
+                <Field
+                  type="textarea"
+                  id="skillsAndCompetencies"
+                  name="skillsAndCompetencies"
+                  className="w-full h-full min-h-32 textarea textarea-bordered bg-neutral text-neutral-content"
+                />
+                <ErrorMessage
+                  name="skillsAndCompetencies"
+                  component="div"
+                  className="text-warning text-sm"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="professionalReferences"
+                  className="block mb-1 font-bold"
+                >
+                  Referências profissionais
+                </label>
+                <Field
+                  type="textarea"
+                  id="professionalReferences"
+                  name="professionalReferences"
+                  className="w-full h-full min-h-32 textarea textarea-bordered bg-neutral text-neutral-content"
+                />
+                <ErrorMessage
+                  name="professionalReferences"
                   component="div"
                   className="text-warning text-sm"
                 />

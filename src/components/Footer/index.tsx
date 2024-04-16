@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
-    <footer className="mx-4 lg:mx-24">
-      <div className="mt-8 flex flex-wrap gap-4 lg:flex-nowrap justify-between content-center">
+    <footer className="shadow-inner bg-base-200">
+      <div className="px-4 pt-8 lg:px-24 flex flex-wrap gap-4 lg:flex-nowrap justify-between content-center">
         <section>
           <h4 className="font-bold text-xl mb-1">Contato</h4>
           <ul>
@@ -43,8 +43,8 @@ export default function Footer() {
           </div>
         </section>
       </div>
-      <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
-      <section className="pb-8 flex flex-wrap gap-4 lg:flex-nowrap justify-between content-center">
+      <hr className="mx-4 lg:mx-24 h-px my-8 bg-neutral-200 border-0" />
+      <section className="px-4 lg:px-24 pb-8 flex flex-wrap gap-4 lg:flex-nowrap justify-between content-center">
         <h4 className="text-base">© Ada Hackathon 2024 - Equipe front-end 1</h4>
       </section>
     </footer>

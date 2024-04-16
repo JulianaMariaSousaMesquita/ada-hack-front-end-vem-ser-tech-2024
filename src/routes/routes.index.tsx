@@ -6,6 +6,7 @@ import FeedBacks from "../pages/FeedBacks";
 import Profile from "../pages/Profile";
 import FormFeedback from "../components/FormFeedback/index.tsx";
 import CandidateRegistration from "../pages/CandidateRegistration/index.tsx";
+import SearchJob from "../pages/SearchJob/index.tsx";
 
 const router = createBrowserRouter([
   {
@@ -33,8 +34,12 @@ const router = createBrowserRouter([
         element: <Profile />,
       },
       {
-        path: "/candidateRegistration",
+        path: "/candidate-registration",
         element: <CandidateRegistration />,
+      },
+      {
+        path: "/search-job",
+        element: <SearchJob />,
       },
     ],
   },
