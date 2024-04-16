@@ -1,7 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import DefaultLayout from "../pages/layouts/Default";
 import Home from "../pages/Home/home";
-import Form from "../components/Form/Form.modules.tsx";
 import Cursos from "../pages/cursos/cursos.tsx";
 import Cadastro from "../pages/Register";
 import FeedBacks from "../pages/FeedBacks";
