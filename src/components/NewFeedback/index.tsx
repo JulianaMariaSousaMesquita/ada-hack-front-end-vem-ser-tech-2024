@@ -1,11 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 interface NewFeedbackProps {
     isOpen: boolean;
     onClose: () => void;
+    addFeedback: (newFeedback: { message: string, rating: number }) => void;
 }
 
-const NewFeedback: React.FC<NewFeedbackProps> = ({ isOpen, onClose }) => {
+const NewFeedback: React.FC<NewFeedbackProps> = ({ isOpen, onClose, addFeedback }) => {
+    const [message, setMessage] = useState("");
+    const [rating, setRating] = useState(3);
+
+    const handleRatingChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const newRating = parseInt(event.target.value);
+        setRating(newRating);
+    };
+
+    const handleFeedbackChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+        setMessage(event.target.value);
+    };
+
+    const handleSubmit = () => {
+        addFeedback({ message, rating });
+        onClose();
+    };
+
     return (
         isOpen && (
             <div className="fixed inset-0 flex items-center justify-center">
@@ -24,15 +42,15 @@ const NewFeedback: React.FC<NewFeedbackProps> = ({ isOpen, onClose }) => {
                             , e outras questões relacionadas ao ambiente de trabalho
                         </p>
                         <div className="rating mt-6">
-                            <input type="radio" name="rating-1" className="mask mask-star" />
-                            <input type="radio" name="rating-1" className="mask mask-star" checked />
-                            <input type="radio" name="rating-1" className="mask mask-star" />
-                            <input type="radio" name="rating-1" className="mask mask-star" />
-                            <input type="radio" name="rating-1" className="mask mask-star" />
+                            <input type="radio" name="rating" className="mask mask-star" value={1} onChange={handleRatingChange} />
+                            <input type="radio" name="rating" className="mask mask-star" value={2} onChange={handleRatingChange} />
+                            <input type="radio" name="rating" className="mask mask-star" value={3} onChange={handleRatingChange} defaultChecked />
+                            <input type="radio" name="rating" className="mask mask-star" value={4} onChange={handleRatingChange} />
+                            <input type="radio" name="rating" className="mask mask-star" value={5} onChange={handleRatingChange} />
                         </div>
-                        <textarea className="textarea textarea-bordered text-black w-96 h-32 mt-10 mb-10 bg-white border rounded-md px-3 py-2 resize-none" placeholder="Digite seu feedback aqui"></textarea>
+                        <textarea className="textarea textarea-bordered text-black w-96 h-32 mt-10 mb-10 bg-white border rounded-md px-3 py-2 resize-none" placeholder="Digite seu feedback aqui" value={message} onChange={handleFeedbackChange}></textarea>
                         <div className="modal-action mt-4">
-                            <button className="btn rounded-full h-10 w-96 bg-base-300" onClick={onClose}>Send Feedback</button> 
+                            <button className="btn rounded-full h-10 w-96 bg-base-300" onClick={handleSubmit}>Send Feedback</button> 
                         </div>
                     </div>
                 </div>
