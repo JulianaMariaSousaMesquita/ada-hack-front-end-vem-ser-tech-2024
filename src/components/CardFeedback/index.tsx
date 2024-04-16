@@ -15,14 +15,14 @@ const CardFeedback: React.FC<CardFeedbackProps> = ({ message, rating }) => {
   };
 
   return (
-    <div className="card w-96 bg-custom-blue shadow-xl m-9">
+    <div className="card w-40 lg:w-96 bg-custom-blue shadow-xl m-9">
       <div className="bg-custom-purple h-10 w-auto rounded"></div>
       <div className="card-body">
         <div className="relative h-24 w-auto overflow-hidden">
           <div className="bg-custom-teste opacity-20 absolute inset-0 ml-6 h-36"></div>
           <div className="flex items-center justify-center">
             <div className="text-container p-4 ml-6">
-              <span className="text-white">{message}</span>
+              <span className="text-secundary">{message}</span>
             </div>
           </div>
         </div>

@@ -2,9 +2,9 @@ import { IoMenu } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import DefaultProfile from "../../assets/Default.svg";
 import Logo from "../../assets/Logo.svg";
-import ThemeSelect from "../ThemeSelect";
 import Login from "../Login";
 import Register from "../Register";
+import ThemeSelect from "../ThemeSelect";
 
 function MenuBar() {
   function openModal(id: string) {

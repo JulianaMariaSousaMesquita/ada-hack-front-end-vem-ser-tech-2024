@@ -1,8 +1,8 @@
-import { Carousel } from "../../components/Carousel";
 import imagemGrupo from "../../assets/imagemGrupo.svg";
-import womanlider from "../../assets/womanlider.svg";
-import wblack from "../../assets/wblack.png";
 import imgD03 from "../../assets/imgD03.svg";
+import wblack from "../../assets/wblack.png";
+import womanlider from "../../assets/womanlider.svg";
+import { Carousel } from "../../components/Carousel";
 
 function Home() {
   return (
@@ -30,13 +30,13 @@ function Home() {
           
         <div className="font-poppins mt-10 container mx-auto px-7">
           <div className="flex items-center">
-            <span className="text-white md:text-3xl font-bold font-poppins ">Metas de diversidade </span>
+            <span className="text-secundary md:text-3xl font-bold font-poppins ">Metas de diversidade </span>
 
 
           </div>
-          <span className="text-white md:text-3xl font-bold font-poppins">na </span>
+          <span className="text-secundary md:text-3xl font-bold font-poppins">na </span>
 
-          <span className="text-violet-950 md:text-3xl  font-weight-700 font-bold font-poppins ml-2">Corp Solutions</span>
+          <span className="text-primary md:text-3xl  font-weight-700 font-bold font-poppins ml-2">Corp Solutions</span>
         
 
           <div className="flex flex-col md:flex-row items-center justify-center md:justify-between mt-4">

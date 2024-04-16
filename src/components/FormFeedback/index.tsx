@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import CardFeedback from '../CardFeedback';
 import NewFeedback from '../NewFeedback';
 
@@ -46,7 +46,7 @@ const FormFeedback: React.FC = () => {
             </div>
             <div className="bg-custom-blue overflow-hidden flex justify-center items-center h-40">
                 <button className="btn bg-custom-purple rounded-full h-5 w-96" onClick={handleModalOpen}>
-                    <span className="text-white">
+                    <span >
                         Adicionar Feedback
                     </span>
                 </button>
