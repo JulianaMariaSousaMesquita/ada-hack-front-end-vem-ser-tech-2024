@@ -1,13 +1,29 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
-import React from "react";
 import { Link } from "react-router-dom";
 import * as Yup from "yup";
+import useModal from "../../hooks/useModal";
 
-const Login: React.FC = () => {
+interface LoginProps {
+  closeModal: () => void;
+}
+
+const Login: React.FC<LoginProps> = ({ closeModal }) => {
+  const { isModalOpen, handleModalOpen, handleModalClose } = useModal();
+
+  function closeAll() {
+    handleModalClose();
+    closeModal();
+  }
+
   return (
     <>
-      <div className="flex justify-center items-center bg-transparent">
-        <div className="max-w-md w-full mx-auto p-8 bg-transparent rounded-lg shadow-lg">
+      <div className="flex bg-base-100 justify-center items-center">
+        <div className="max-w-md w-full mx-auto p-8 pt-4 rounded-lg shadow-lg">
+          <div className="w-full flex justify-end items-center">
+            <button className="float-right" onClick={closeModal}>
+              Fechar
+            </button>
+          </div>
           <h1 className="text-3xl font-bold text-center mb-4 ">Login</h1>
           <Formik
             initialValues={{
@@ -64,17 +80,34 @@ const Login: React.FC = () => {
                 />
               </div>
 
-              <button type="submit" className="btn btn-primary sm:btn-wide block mx-auto">
+              <button
+                type="submit"
+                className="btn btn-primary sm:btn-wide block mx-auto"
+              >
                 Entrar
               </button>
             </Form>
           </Formik>
           <p className="text-center mt-4">
             Não tem cadastro?{" "}
-            <Link to="/cadastro" className="text-primary">
-              Cadastre-se aqui
-            </Link>
+            <button onClick={handleModalOpen} className="text-primary">
+              Cadastre-se
+            </button>
           </p>
+          {isModalOpen && (
+            <div className="flex w-full gap-2 justify-center items-center pt-4">
+              <Link to={"/register-employee"}>
+                <button className="btn btn-neutral" onClick={closeAll}>
+                  Funcionário
+                </button>
+              </Link>
+              <Link to={"/register-candidate"}>
+                <button className="btn btn-neutral" onClick={closeAll}>
+                  Candidato
+                </button>
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </>

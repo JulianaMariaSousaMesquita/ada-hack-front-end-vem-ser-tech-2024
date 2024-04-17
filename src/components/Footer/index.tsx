@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="shadow-inner bg-base-200">
+    <footer className="shadow-inner bg-base-200 mt-10">
       <div className="px-4 pt-8 lg:px-24 flex flex-wrap gap-4 lg:flex-nowrap justify-between content-center">
         <section>
           <h4 className="font-bold text-xl mb-1">Contato</h4>

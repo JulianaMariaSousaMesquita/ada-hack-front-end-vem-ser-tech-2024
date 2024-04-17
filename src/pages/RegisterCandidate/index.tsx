@@ -1,11 +1,11 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
 
-export default function CandidateRegistration() {
+export default function RegisterCandidate() {
   return (
     <>
-      <main className="w-full mt-4 mb-20">
-        <div className="w-full flex flex-col items-center justify-center">
+      <main className="w-full mt-4 mb-20 flex justify-center items-center bg-transparent">
+        <div className="w-full flex flex-col items-center justify-center max-w-2xl p-8 bg-transparent rounded-lg shadow-lg">
           <h2 className="text-3xl font-bold text-center mb-4">
             Cadastro de candidato
           </h2>
@@ -47,25 +47,12 @@ export default function CandidateRegistration() {
               birthDate: Yup.string().required(
                 "Por favor, digite sua data de nascimento."
               ),
-              race: Yup.string(),
-              gender: Yup.string(),
-              genderIdentity: Yup.string(),
-              sexualOrientation: Yup.string(),
-              education: Yup.string(),
-              professionalExperience: Yup.string(),
-              skillsAndCompetencies: Yup.string(),
-              experienceDiversityInclusion: Yup.string(),
-              participationInitiatives: Yup.string(),
-              accommodations: Yup.string(),
-              salaryExpectations: Yup.string(),
-              changeLocation: Yup.string(),
-              professionalReferences: Yup.string(),
             })}
             onSubmit={(values) => {
               console.log("Dados:", values);
             }}
           >
-            <Form className="space-y-4 w-[70%] lg:w-[50%]">
+            <Form className="space-y-4">
               <div>
                 <label htmlFor="fullName" className="block mb-1 font-bold">
                   Nome completo
@@ -206,13 +193,7 @@ export default function CandidateRegistration() {
                     className="px-3 py-2 input input-sm input-bordered bg-neutral text-neutral-content"
                   />
                 </div>
-                <ErrorMessage
-                  name="race"
-                  component="div"
-                  className="text-warning text-sm"
-                />
               </div>
-
               <div>
                 <label htmlFor="gender" className="block mb-1 font-bold">
                   Gênero
@@ -267,11 +248,6 @@ export default function CandidateRegistration() {
                     className="px-3 py-2 input input-sm input-bordered bg-neutral text-neutral-content"
                   />
                 </div>
-                <ErrorMessage
-                  name="gender"
-                  component="div"
-                  className="text-warning text-sm"
-                />
               </div>
               <div>
                 <label
@@ -285,6 +261,7 @@ export default function CandidateRegistration() {
                   as="select"
                   className="select select-bordered w-full max-w-xs bg-neutral text-neutral-content"
                 >
+                  <option value="">Escolha uma opção</option>
                   <option value="homem">Homem</option>
                   <option value="mulher">Mulher</option>
                   <option value="transgenero">Transgênero</option>
@@ -305,11 +282,6 @@ export default function CandidateRegistration() {
                     className="px-3 py-2 input input-sm input-bordered bg-neutral text-neutral-content"
                   />
                 </div>
-                <ErrorMessage
-                  name="genderIdentity"
-                  component="div"
-                  className="text-warning text-sm"
-                />
               </div>
               <div>
                 <label
@@ -323,6 +295,7 @@ export default function CandidateRegistration() {
                   as="select"
                   className="select select-bordered w-full max-w-xs bg-neutral text-neutral-content"
                 >
+                  <option value="">Escolha uma opção</option>
                   <option value="heterossexual">Heterossexual</option>
                   <option value="homossexual">Homossexual</option>
                   <option value="bissexual">Bissexual</option>
@@ -344,11 +317,6 @@ export default function CandidateRegistration() {
                     className="px-3 py-2 input input-sm input-bordered bg-neutral text-neutral-content"
                   />
                 </div>
-                <ErrorMessage
-                  name="sexualOrientation"
-                  component="div"
-                  className="text-warning text-sm"
-                />
               </div>
               <div>
                 <label htmlFor="education" className="block mb-1 font-bold">
@@ -359,6 +327,7 @@ export default function CandidateRegistration() {
                   as="select"
                   className="select select-bordered w-full max-w-xs bg-neutral text-neutral-content"
                 >
+                  <option value="">Escolha uma opção</option>
                   <option value="ensinoFundamental">Ensino Fundamental</option>
                   <option value="ensinoMedio">Ensino Médio</option>
                   <option value="graduacao">Graduação</option>
@@ -380,11 +349,6 @@ export default function CandidateRegistration() {
                     className="px-3 py-2 input input-sm input-bordered bg-neutral text-neutral-content"
                   />
                 </div>
-                <ErrorMessage
-                  name="education"
-                  component="div"
-                  className="text-warning text-sm"
-                />
               </div>
               <div>
                 <label
@@ -399,11 +363,6 @@ export default function CandidateRegistration() {
                   name="professionalExperience"
                   className="w-full h-full min-h-32 textarea textarea-bordered bg-neutral text-neutral-content"
                 />
-                <ErrorMessage
-                  name="professionalExperience"
-                  component="div"
-                  className="text-warning text-sm"
-                />
               </div>
               <div>
                 <label
@@ -417,11 +376,6 @@ export default function CandidateRegistration() {
                   id="skillsAndCompetencies"
                   name="skillsAndCompetencies"
                   className="w-full h-full min-h-32 textarea textarea-bordered bg-neutral text-neutral-content"
-                />
-                <ErrorMessage
-                  name="skillsAndCompetencies"
-                  component="div"
-                  className="text-warning text-sm"
                 />
               </div>
               <div>
@@ -441,11 +395,6 @@ export default function CandidateRegistration() {
                   <option value="nao">Não</option>
                   <option value="pnd">Prefiro não dizer</option>
                 </Field>
-                <ErrorMessage
-                  name="experienceDiversityInclusion"
-                  component="div"
-                  className="text-warning text-sm"
-                />
               </div>
               <div>
                 <label
@@ -459,11 +408,6 @@ export default function CandidateRegistration() {
                   id="participationInitiatives"
                   name="participationInitiatives"
                   className="w-full h-full min-h-32 textarea textarea-bordered bg-neutral text-neutral-content"
-                />
-                <ErrorMessage
-                  name="participationInitiatives"
-                  component="div"
-                  className="text-warning text-sm"
                 />
               </div>
               <div>
@@ -483,11 +427,6 @@ export default function CandidateRegistration() {
                   <option value="nao">Não</option>
                   <option value="pnd">Prefiro não dizer</option>
                 </Field>
-                <ErrorMessage
-                  name="accommodations"
-                  component="div"
-                  className="text-warning text-sm"
-                />
               </div>
               <div>
                 <label
@@ -502,11 +441,6 @@ export default function CandidateRegistration() {
                   name="salaryExpectations"
                   placeholder="R$"
                   className="w-full px-3 py-2 input input-bordered bg-neutral text-neutral-content"
-                />
-                <ErrorMessage
-                  name="salaryExpectations"
-                  component="div"
-                  className="text-warning text-sm"
                 />
               </div>
               <div>
@@ -525,11 +459,6 @@ export default function CandidateRegistration() {
                   <option value="sim">Sim</option>
                   <option value="nao">Não</option>
                 </Field>
-                <ErrorMessage
-                  name="changeLocation"
-                  component="div"
-                  className="text-warning text-sm"
-                />
               </div>
               <div>
                 <label
@@ -544,11 +473,6 @@ export default function CandidateRegistration() {
                   name="skillsAndCompetencies"
                   className="w-full h-full min-h-32 textarea textarea-bordered bg-neutral text-neutral-content"
                 />
-                <ErrorMessage
-                  name="skillsAndCompetencies"
-                  component="div"
-                  className="text-warning text-sm"
-                />
               </div>
               <div>
                 <label
@@ -562,11 +486,6 @@ export default function CandidateRegistration() {
                   id="professionalReferences"
                   name="professionalReferences"
                   className="w-full h-full min-h-32 textarea textarea-bordered bg-neutral text-neutral-content"
-                />
-                <ErrorMessage
-                  name="professionalReferences"
-                  component="div"
-                  className="text-warning text-sm"
                 />
               </div>
               <button

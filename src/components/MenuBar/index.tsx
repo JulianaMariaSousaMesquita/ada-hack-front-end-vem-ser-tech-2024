@@ -4,14 +4,11 @@ import DefaultProfile from "../../assets/Default.svg";
 import Logo from "../../assets/Logo.svg";
 import ThemeSelect from "../ThemeSelect";
 import Login from "../Login";
-import Register from "../Register";
+import Modal from "../Modal";
+import useModal from "../../hooks/useModal";
 
 function MenuBar() {
-  function openModal(id: string) {
-    if (document) {
-      (document.getElementById(id) as HTMLFormElement).showModal();
-    }
-  }
+  const { isModalOpen, handleModalOpen, handleModalClose } = useModal();
 
   return (
     <>
@@ -33,12 +30,6 @@ function MenuBar() {
               </li>
               <li>
                 <Link to={`/feedbacks`}>Feedbacks</Link>
-              </li>
-              <li
-                className="py-1 px-3 cursor-pointer"
-                onClick={() => openModal("register")}
-              >
-                Cadastro
               </li>
             </ul>
           </div>
@@ -65,15 +56,17 @@ function MenuBar() {
               <li>
                 <Link to={`/feedbacks`}>Feedbacks</Link>
               </li>
-              <li onClick={() => openModal("register")}>
-                <button>Cadastro</button>
+              <li>
+                <Link to={`/search-job`}>Vagas</Link>
               </li>
             </ul>
           </div>
           <div className="navbar-end w-10 sm:w-16 ml-20 sm:ml-32 mr-0 sm:mr-10 ">
             <ul className="menu menu-horizontal px-0 text-lg">
-              <li onClick={() => openModal("login")}>
-                <button className="text-xs sm:text-xl mr-0 sm:mr-1">Entrar</button>
+              <li onClick={handleModalOpen}>
+                <button className="text-xs sm:text-xl mr-0 sm:mr-1">
+                  Entrar
+                </button>
               </li>
             </ul>
             <div className="dropdown dropdown-end ">
@@ -108,26 +101,9 @@ function MenuBar() {
         </nav>
         <ThemeSelect />
       </header>
-      <dialog id="login" className="modal">
-        <div className="modal-box">
-          <Login />
-          <div className="modal-action">
-            <form method="dialog">
-              <button className="btn">Fechar</button>
-            </form>
-          </div>
-        </div>
-      </dialog>
-      <dialog id="register" className="modal">
-        <div className="modal-box">
-          <Register />
-          <div className="modal-action">
-            <form method="dialog">
-              <button className="btn">Fechar</button>
-            </form>
-          </div>
-        </div>
-      </dialog>
+      <Modal isOpen={isModalOpen} onClose={handleModalClose}>
+        <Login closeModal={handleModalClose} />
+      </Modal>
     </>
   );
 }

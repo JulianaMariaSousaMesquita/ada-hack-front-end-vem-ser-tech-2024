@@ -3,7 +3,7 @@ import { useTheme } from "../../contexts/ThemeContext";
 export default function ThemeSelect() {
   const { changeTheme } = useTheme();
 
-  const handleThemeChange = (e: { target: { value: any; }; }) => {
+  const handleThemeChange = (e: { target: { value: string; }; }) => {
     const { value } = e.target;
     changeTheme(value);
   };

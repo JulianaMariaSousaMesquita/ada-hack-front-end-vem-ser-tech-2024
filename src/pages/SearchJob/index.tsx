@@ -8,7 +8,7 @@ export default function SearchJob() {
         <input className="input input-bordered join-item" />
         <button className="btn btn-primary join-item rounded-r-full">Pesquisar</button>
       </div>
-      <div className="w-full flex flex-wrap items-center justify-center gap-4">
+      <div className="w-full flex flex-wrap items-center justify-center gap-4 -z-0">
         {Array.from({length: 6}).map((_, index) => (<CardJob key={index}/>)) }
       </div>
     </div>

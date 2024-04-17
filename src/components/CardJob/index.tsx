@@ -19,8 +19,12 @@ export default function CardJob() {
           <span className="font-semibold">Local: </span>
           Rio de Janeiro
         </p>
+        <p>
+          <span className="font-semibold">Data encerramento: </span>
+          dd/mm/aaaa
+        </p>
         <div className="card-actions justify-center">
-          <button className="btn btn-neutral text-neutral-content w-full">
+          <button className="btn btn-neutral mt-2 text-neutral-content w-full">
             Aplicar
           </button>
         </div>
