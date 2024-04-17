@@ -34,7 +34,7 @@ const NewFeedback: React.FC<NewFeedbackProps> = ({ onClose, addFeedback }) => {
         </button>
         <span className="text-center">Feedback</span>
       </div>
-      <div className="modal-content p-5 flex flex-col items-center">
+      <div className="modal-content bg-base-200 p-5 flex flex-col items-center">
         <p className="py-4 text-left w-96">
           Compartilhe suas experiências, sugestões ou preocupações sobre
           diversidade e inclusão, e outras questões relacionadas ao ambiente de

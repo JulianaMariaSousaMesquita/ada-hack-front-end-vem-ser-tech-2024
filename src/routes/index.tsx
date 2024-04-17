@@ -1,9 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
-import DefaultLayout from "../pages/layouts/Default";
-import Home from "../pages/Home/home";
-import Cursos from "../pages/cursos/cursos.tsx";
-import FeedBacks from "../pages/FeedBacks";
-import Profile from "../pages/Profile";
+import DefaultLayout from "../pages/layouts/Default.tsx";
+import Home from "../pages/Home/index.tsx";
+import Cursos from "../pages/Cursos/index.tsx";
+import Profile from "../pages/Profile/index.tsx";
 import FormFeedback from "../components/FormFeedback/index.tsx";
 import SearchJob from "../pages/SearchJob/index.tsx";
 import Register from "../components/Register/index.tsx";
@@ -19,10 +18,6 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/form",
-        element: <FeedBacks />,
-      },
-      {
         path: "/cursos",
         element: <Cursos />,
       },
@@ -36,7 +31,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/register-employee",
-        element: <Register />,        
+        element: <Register />,
       },
       {
         path: "/register-candidate",

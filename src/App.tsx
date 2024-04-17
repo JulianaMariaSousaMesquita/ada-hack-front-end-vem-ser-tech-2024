@@ -1,7 +1,6 @@
 import { RouterProvider } from "react-router-dom";
 import { useTheme } from "./contexts/ThemeContext";
-import router from "./routes/routes";
-
+import router from "./routes";
 
 function App() {
   const { theme } = useTheme();

@@ -15,12 +15,40 @@ const FormFeedback: React.FC = () => {
 
   useEffect(() => {
     const initialFeedbackData: FeedbackData[] = [
-      { message: "Ótimo produto!", rating: 5 },
-      { message: "Adorei o atendimento!", rating: 4 },
-      { message: "Poderia ser melhor.", rating: 3 },
-      { message: "Excelente serviço!", rating: 5 },
-      { message: "Recomendo!", rating: 4 },
-      { message: "Nunca mais compro aqui!", rating: 1 },
+      {
+        message: "Sinto-me valorizado e respeitado por colegas e superiores",
+        rating: 5,
+      },
+      {
+        message:
+          "A empresa promove um ambiente acolhedor para todos os funcionários",
+        rating: 4,
+      },
+      {
+        message:
+          "Há oportunidades de crescimento para pessoas de diferentes origens e identidades",
+        rating: 4,
+      },
+      {
+        message:
+          "A diversidade é celebrada e reconhecida como um valor fundamental da empresa",
+        rating: 5,
+      },
+      {
+        message:
+          "A empresa precisa melhorar seu programa de inclusão e diversidade",
+        rating: 3,
+      },
+      {
+        message:
+          "Ainda há casos de preconceito e discriminação que precisam ser abordados",
+        rating: 2,
+      },
+      {
+        message:
+          "Fui maltratado por colegas de trabalho devido à minha identidade de gênero",
+        rating: 1,
+      },
     ];
     setFeedbackData(initialFeedbackData);
   }, []);
@@ -31,8 +59,8 @@ const FormFeedback: React.FC = () => {
 
   return (
     <div>
-      <div className="bg-custom-blue overflow-hidden flex justify-center items-center mt-1">
-        <div className="carousel carousel-center rounded-box grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4 mt">
+      <div className="overflow-hidden flex justify-center items-center mt-1">
+        <div className="flex flex-wrap justify-center items-center gap-6 px-4">
           {feedbackData.map((feedback, index) => (
             <CardFeedback
               key={index}
