@@ -1,4 +1,3 @@
-
 const Profile = () => {
   const profileData = {
     name: "John Doe",
