@@ -10,11 +10,6 @@ interface Curso {
   imagem: string;
 }
 
-interface Curso {
-  id: number;
-  nome: string;
-}
-
 const Cursos: React.FC = () => {
   const [filtro, setFiltro] = useState<string>("");
 
