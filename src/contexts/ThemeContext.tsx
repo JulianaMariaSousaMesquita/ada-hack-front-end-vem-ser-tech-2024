@@ -18,13 +18,13 @@ interface ThemeContextType {
 
 export const ThemeContext = createContext<ThemeContextType>({
   theme: "",
-  changeTheme: ()=>{} ,
+  changeTheme: () => {},
 });
 
 export const useTheme = () => useContext(ThemeContext);
 
 export const ThemeProvider = ({ children }: ThemeProviderProps) => {
-  const [theme, setTheme] = useState<string>("garden");
+  const [theme, setTheme] = useState<string>("aqua");
 
   const changeTheme = useCallback((theme: string) => {
     localStorage.setItem("theme", theme);
