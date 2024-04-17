@@ -28,32 +28,32 @@ export function Carousel() {
 
   return (
     <div className="flex flex-col  ">
-      <h2 className="my-10 ml-24 text-2xl">Depoimentos</h2>
+      <h2 className="my-10 ml-24 text-3xl font-bold">Depoimentos</h2>
 
-      <div className="relative mx-auto  w-full lg:w-[90%] xl:w-[95%] ">
+      <div className="relative mx-auto  w-full lg:w-[90%] xl:w-[95%] px-8 ">
         <button
           onClick={handleLeftClick}
           className="cursor-pointer absolute top-1/2 transform -translate-y-1/2 left-0 z-10 lg:bg-base-100 h-full"
         >
-          <FaChevronLeft className="text-slate-50 size-8 lg:size-10" />
+          <FaChevronLeft className="size-8 lg:size-10" />
         </button>
         <button
           onClick={handleRightClick}
           className="cursor-pointer absolute top-1/2 transform -translate-y-1/2 right-0 z-10 lg:bg-base-100 h-full"
         >
-          <FaChevronRight className="text-slate-50 size-8 lg:size-10" />
+          <FaChevronRight className="size-8 lg:size-10" />
         </button>
         <div
           ref={carousel}
-          className="flex  overflow-x-hidden scroll-smooth  "
+          className="flex  overflow-x-hidden scroll-smooth"
           style={{ scrollSnapType: "x mandatory", width: "100%" }}
         >
           {depoimentos.map((depoimento, index) => (
             <div
               key={index}
-              className="flex-none w-64 text-sm lg:w-96 p-3 lg:p-6 ml-8 lg:ml-9  bg-gray-300 bg-opacity-50 rounded"
+              className="flex-none shadow-inner w-64 text-sm lg:w-96 p-3 lg:p-6 ml-8 lg:ml-9 bg-base-200 bg-opacity-50 rounded"
             >
-              <p className="text-justify text-slate-50">{depoimento}</p>
+              <p className="font-semibold">{depoimento}</p>
             </div>
           ))}
         </div>

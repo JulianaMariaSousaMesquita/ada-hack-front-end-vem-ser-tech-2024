@@ -1,30 +1,60 @@
-# React + TypeScript + Vite
+# Projeto Diversidade e Inclusão na Corp Solutions
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# # Repositório criado para o Ada Hack do curso Vem Ser Tech - Front End da Ada 
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este projeto visa criar um ambiente de trabalho inclusivo e acolhedor na Corp Solutions, focado na conscientização dos funcionários sobre diversidade e inclusão.
 
-## Expanding the ESLint configuration
+Objetivos do case:
+Identificar oportunidades de aumentar a diversidade na Corp Solutions. Desenvolver soluções criativas, aplicáveis e inovadoras para promover a inclusão e equidade no ambiente de trabalho. Contribuir para a construção de uma cultura organizacional diversa, inclusiva e sustentável.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Tecnologias e Ferramentas Utilizadas 🕹
+- React
+- Node.js
+- TypeScript
+- Figma
+- VsCode
+- GitHub
+- Tailwind
+- Daisyui
+- React icons
+
+## Organização do Projeto 📈
+
+● Criamos o backlog;
+
+● Definimos os responsáveis por cada tarefa através do Figma;
+
+● Exploramos o máximo possível dos integrantes para que o projeto atendesse todos os requisitos propostos;
+
+## Executando o Projeto
+
+1. Clone este repositório.
+2. Instale as dependências usando npm install ou yarn install.
+3. Execute o servidor de desenvolvimento.
+4. Acesse o projeto no navegador.
+  
+
+## Integrantes do Grupo 💻
+
+- [Gabriella Freitas](https://github.com/gabriellafsena)👩🏻‍💻;
+- [Juliana Mesquita](https://github.com/JulianaMariaSousaMesquita)👩🏻‍💻;
+- [Lucas da Silva Justino](https://github.com/Lucas-Justino)👨🏻‍💻;
+- [Paulo Lemes](https://github.com/paulo-lemes)👨🏻‍💻;
+- [Victor Callegari](https://github.com/VictorCallegari)👨🏻‍💻;
+- [Wild Barreto](https://github.com/WildBarreto) 👨🏻‍💻;
+
+##Documentação técnica 
+[Documento PDF](file:///C:/Users/Gabriella%20Freitas/Desktop/Documenta%C3%A7%C3%A3o-tecnica.pdf)
+
+
+## Contribuindo
+
+Sinta-se à vontade para contribuir com novas funcionalidades, correções de bugs ou melhorias na documentação.
+
+
+## Aplicação na nuvem
+https://ada-hack-corp-solutions-time-fe-1.vercel.app/ 
