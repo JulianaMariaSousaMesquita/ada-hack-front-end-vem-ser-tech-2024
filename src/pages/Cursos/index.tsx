@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import CardCursos from "../../components/CardCursos";
-import { cursosData } from "./dbCursos";
+import { cursosData } from './dbCursos';
 import { IoSearch } from "react-icons/io5";
 
 const Cursos: React.FC = () => {
