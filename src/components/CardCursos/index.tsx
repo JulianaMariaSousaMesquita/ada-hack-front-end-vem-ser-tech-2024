@@ -46,4 +46,3 @@ const CardCursos: React.FC<Props> = ({ curso }) => {
 };
 
 export default CardCursos;
-
