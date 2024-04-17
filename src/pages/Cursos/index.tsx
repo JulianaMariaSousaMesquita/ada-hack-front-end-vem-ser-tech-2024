@@ -1,7 +1,14 @@
 import React, { useState } from "react";
 import CardCursos from "../../components/CardCursos";
-import { cursosData } from './dbCursos';
+import { cursosData } from "./dbCursos.tsx";
 import { IoSearch } from "react-icons/io5";
+
+interface Curso {
+  id: number;
+  nome: string;
+  descricao: string;
+  imagem: string;
+}
 
 interface Curso {
   id: number | string
@@ -15,7 +22,7 @@ const Cursos: React.FC = () => {
     return curso.nome.toLowerCase().includes(filtro.toLowerCase());
   };
 
-  const cursosFiltrados = cursosData.filter((curso) =>
+  const cursosFiltrados = cursosData.filter((curso: Curso) =>
     filtrarCursos(curso)
   );
 
@@ -23,10 +30,7 @@ const Cursos: React.FC = () => {
     <>
       <div className="flex w-full px-4 flex-col justify-center items-center">
         <h2 className="text-2xl lg:text-5xl font-bold text-center">
-          Cursos e {" "}
-          <span className="text-primary">
-            treinamentos
-          </span>
+          Cursos e <span className="text-primary">treinamentos</span>
         </h2>
         <div className="flex w-64 justify-center items-center mt-10 border border-primary rounded-md transition duration-300">
           <IoSearch className="ml-4" />
@@ -44,7 +48,7 @@ const Cursos: React.FC = () => {
         {cursosFiltrados.length === 0 ? (
           <p className="text-center text-red-500">Nenhum curso encontrado!</p>
         ) : (
-          cursosFiltrados.map((curso) => (
+          cursosFiltrados.map((curso: Curso) => (
             <CardCursos key={curso.id} curso={curso} />
           ))
         )}
