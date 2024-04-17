@@ -53,7 +53,7 @@ export function Carousel() {
               key={index}
               className="flex-none w-64 text-sm lg:w-96 p-3 lg:p-6 ml-8 lg:ml-9  bg-gray-300 bg-opacity-50 rounded"
             >
-              <p className="text-justify text-slate-50">{depoimento}</p>
+              <p className="text-justify ">{depoimento}</p>
             </div>
           ))}
         </div>

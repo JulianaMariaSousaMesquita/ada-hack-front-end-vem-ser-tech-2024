@@ -18,7 +18,7 @@ const CardCursos: React.FC<Props> = ({ curso }) => {
 
   return (
     <Link to={`/`} className="flex justify-center items-center h-full">
-      <div className="p-2 w-64 h-80 border rounded-3xl bg-base-100 shadow-xl transition-transform duration-300 transform-gpu hover:scale-105 flex flex-col  bg-[#ffff]/75">
+      <div className="p-2 w-64 h-80 border rounded-3xl  shadow-xl transition-transform duration-300 transform-gpu hover:scale-105 flex flex-col  bg-[#ffff]/75">
         <div className="h-40 overflow-hidden rounded-t-3xl">
           <img
             src={curso.imagem}
@@ -27,7 +27,7 @@ const CardCursos: React.FC<Props> = ({ curso }) => {
             onError={handleImageError}
           />
         </div>
-        <div>
+        <div className="mt-2">
           <InfoCursosBar />
         </div>
         <div className="p-3 flex flex-col justify-between flex-1">
