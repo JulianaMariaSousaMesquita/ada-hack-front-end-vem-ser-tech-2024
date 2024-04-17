@@ -3,15 +3,20 @@ import CardCursos from "../../components/CardCursos";
 import { cursosData } from './dbCursos';
 import { IoSearch } from "react-icons/io5";
 
+interface Curso {
+  id: number | string
+  nome: string;
+}
+
 const Cursos: React.FC = () => {
   const [filtro, setFiltro] = useState<string>("");
 
-  const filtrarCursos = (curso: string): boolean => {
-    return curso.toLowerCase().includes(filtro.toLowerCase());
+  const filtrarCursos = (curso: Curso): boolean => {
+    return curso.nome.toLowerCase().includes(filtro.toLowerCase());
   };
 
   const cursosFiltrados = cursosData.filter((curso) =>
-    filtrarCursos(curso.nome)
+    filtrarCursos(curso)
   );
 
   return (
