@@ -11,7 +11,7 @@ interface Curso {
 }
 
 interface Curso {
-  id: number | string
+  id: number;
   nome: string;
 }
 
