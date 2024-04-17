@@ -1,12 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
 import DefaultLayout from "../pages/layouts/Default.tsx";
-import Home from "../pages/Home/index.tsx";
-import Cursos from "../pages/Cursos/index.tsx";
-import Profile from "../pages/Profile/index.tsx";
-import FormFeedback from "../components/FormFeedback/index.tsx";
-import SearchJob from "../pages/SearchJob/index.tsx";
-import Register from "../components/Register/index.tsx";
-import RegisterCandidate from "../pages/RegisterCandidate/index.tsx";
+import Home from "../pages/Home";
+import Cursos from "../pages/Cursos";
+import FormFeedback from "../components/FormFeedback";
+import Profile from "../pages/Profile";
+import Register from "../components/Register";
+import RegisterCandidate from "../pages/RegisterCandidate";
+import SearchJob from "../pages/SearchJob";
 
 const router = createBrowserRouter([
   {
