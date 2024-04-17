@@ -4,7 +4,7 @@ import Home from "../pages/Home";
 import Cursos from "../pages/Cursos";
 import FormFeedback from "../components/FormFeedback";
 import Profile from "../pages/Profile";
-import Register from "../components/Register";
+import RegisterEmployee from "../pages/RegisterEmployee/";
 import RegisterCandidate from "../pages/RegisterCandidate";
 import SearchJob from "../pages/SearchJob";
 
@@ -31,7 +31,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/register-employee",
-        element: <Register />,
+        element: <RegisterEmployee />,
       },
       {
         path: "/register-candidate",

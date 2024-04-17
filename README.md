@@ -48,7 +48,7 @@ Identificar oportunidades de aumentar a diversidade na Corp Solutions. Desenvolv
 - [Wild Barreto](https://github.com/WildBarreto) 👨🏻‍💻;
 
 ##Documentação técnica 
-[Documento PDF](file:///C:/Users/Gabriella%20Freitas/Desktop/Documenta%C3%A7%C3%A3o-tecnica.pdf)
+[Documento PDF](./Documentação-tecnica-CorpSolutions-AdaHackathon-2024-EquipeFE01.pdf)
 
 
 ## Contribuindo
